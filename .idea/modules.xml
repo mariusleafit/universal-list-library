@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/universal-list-library/universal-list-library.iml" filepath="$PROJECT_DIR$/universal-list-library/universal-list-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/universal-list-library-parent.iml" filepath="$PROJECT_DIR$/universal-list-library-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/universal-list-library-test/universal-list-library-test.iml" filepath="$PROJECT_DIR$/universal-list-library-test/universal-list-library-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/universal-list-library/gen-external-apklibs/~apklib-ch.leafit.iac_inter-activity-communication-lib_1.0-SNAPSHOT.iml" filepath="$PROJECT_DIR$/universal-list-library/gen-external-apklibs/~apklib-ch.leafit.iac_inter-activity-communication-lib_1.0-SNAPSHOT.iml" />
+    </modules>
+  </component>
+</project>
+
