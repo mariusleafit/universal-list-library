@@ -2,5 +2,5 @@
 <resources>
     <string name="hello">Hello universal-list-library!</string>
     <string name="lib_name">universal-list-library</string>
-    <string name="search_hint">Search...</string>
+    <string name="search_hint">Chercher...</string>
 </resources>

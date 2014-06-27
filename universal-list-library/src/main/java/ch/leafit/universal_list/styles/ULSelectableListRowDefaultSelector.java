@@ -18,7 +18,7 @@ public class ULSelectableListRowDefaultSelector extends StateListDrawable {
 
         /*selected-status*/
         ColorDrawable selectedColor = new ColorDrawable(Color.argb(255,125,175,255));
-        this.addState(new int[] { android.R.attr.state_selected },selectedColor);
+        this.addState(new int[] { android.R.attr.state_checked },selectedColor);
 
         /*activated-status*/
         ColorDrawable activatedColor = new ColorDrawable(Color.argb(255,255,255,255));

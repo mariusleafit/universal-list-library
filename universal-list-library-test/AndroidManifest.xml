@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".universal_list.activities.ULListActivity"></activity>
+        <activity android:name=".universal_list.activities.ULSearchListActivity"></activity>
     </application>
 
 </manifest>

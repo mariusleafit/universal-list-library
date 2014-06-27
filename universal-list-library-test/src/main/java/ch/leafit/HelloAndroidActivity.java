@@ -4,11 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import ch.leafit.universal_list.activities.ULListActivity;
+import ch.leafit.universal_list.activities.ULSearchListActivity;
 import ch.leafit.universal_list.activities.intent_datastores.ULListActivityIntentDatastore;
+import ch.leafit.universal_list.activities.intent_datastores.ULListActivityReturnIntentDatastore;
 import ch.leafit.universal_list.adapters.ULDynamicListAdapter;
 import ch.leafit.universal_list.adapters.ULSectionedListAdapter;
 import ch.leafit.universal_list.adapters.ULSimpleListAdapter;
@@ -35,6 +38,7 @@ public class HelloAndroidActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         ListView listView = (ListView)findViewById(R.id.lstTest);
+        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
         ArrayList<ULListItemBaseModel> simpleItems = new ArrayList<ULListItemBaseModel>();
         simpleItems.add(new ULSectionTitleListItemModel("Section"));
@@ -48,25 +52,8 @@ public class HelloAndroidActivity extends Activity {
         simpleItems.add(new ULTwoFieldsListItemModel("Marius","Gächter"));
         simpleItems.add(new ULOneFieldListItemModel("Marius"));
 
-
-
         ULDynamicListAdapter simpleListAdapter = new ULDynamicListAdapter(this, simpleItems);
-
-
-
-        //listView.setAdapter(simpleListAdapter);
-
-        List<String> stringItems = new ArrayList<String>();
-        stringItems.add("asdfasdf");
-        stringItems.add("sdfr");
-        stringItems.add("rrr");
-        stringItems.add("xcv");
-        stringItems.add("45345345345345");
-
-        ArrayAdapter<String> tstAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,stringItems);
-        listView.setAdapter(tstAdapter);
-        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        listView.setSelector(new ULSelectableListRowDefaultSelector());
+        listView.setAdapter(simpleListAdapter);
     }
 
     public void btnOpenListClick(View v) {
@@ -85,13 +72,20 @@ public class HelloAndroidActivity extends Activity {
         simpleItems.add(new ULTwoFieldsListItemModel("Marius","Gächter"));
         simpleItems.add(new ULOneFieldListItemModel("Marius"));
 
-        ULListActivityIntentDatastore intentDatastore = new ULListActivityIntentDatastore("Meine Liste",simpleItems,defaultValue);
+        ULListActivityIntentDatastore intentDatastore = new ULListActivityIntentDatastore("Meine Liste",simpleItems,defaultValue, ListView.CHOICE_MODE_MULTIPLE);
 
-        Intent listIntent =  intentDatastore.getIntent(this, ULListActivity.class);
+        Intent listIntent =  intentDatastore.getIntent(this, ULSearchListActivity.class);
 
-        startActivity(listIntent);
+        startActivityForResult(listIntent, 1);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
+        ULListActivityReturnIntentDatastore returnIntentDatastore = new ULListActivityReturnIntentDatastore(data);
+        Log.i("asdfasdf", String.valueOf(returnIntentDatastore.mSelectedItems.size()));
+
+    }
 }
 

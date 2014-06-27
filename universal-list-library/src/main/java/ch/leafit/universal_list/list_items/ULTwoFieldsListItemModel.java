@@ -30,7 +30,8 @@ public class ULTwoFieldsListItemModel extends ULListItemBaseModel {
      * @return The layoutId of the ListEntryView layout
      */
     public int getViewLayoutId() {
-        return android.R.layout.simple_list_item_2;
+        //activated --> makes that item selection works (don't use simple_list_item_2 (wasted time: 1h :)))
+        return android.R.layout.simple_list_item_activated_2;
     }
 
 

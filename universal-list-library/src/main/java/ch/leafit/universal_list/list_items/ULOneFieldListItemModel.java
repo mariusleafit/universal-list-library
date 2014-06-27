@@ -29,7 +29,8 @@ public class ULOneFieldListItemModel extends ULListItemBaseModel {
      * @return The layoutId of the ListEntryView layout
      */
     public int getViewLayoutId() {
-        return android.R.layout.simple_list_item_1;
+        //activated --> makes that item selection works (don't use simple_list_item_1 (wasted time: 1h :)))
+        return android.R.layout.simple_list_item_activated_1;
     }
 
 

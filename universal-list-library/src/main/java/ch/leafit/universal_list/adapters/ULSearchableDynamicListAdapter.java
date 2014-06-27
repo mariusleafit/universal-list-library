@@ -2,6 +2,7 @@ package ch.leafit.universal_list.adapters;
 
 import android.content.Context;
 import android.widget.Filter;
+import android.widget.Filterable;
 import ch.leafit.universal_list.list_items.ULListItemBaseModel;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.List;
 /**
  * Created by marius on 27/06/14.
  */
-public class ULSearchableDynamicListAdapter extends ULDynamicListAdapter {
+public class ULSearchableDynamicListAdapter extends ULDynamicListAdapter implements Filterable {
     private ULItemFilter mFilter;
     private List<ULListItemBaseModel> mUnfilteredMenuItems;
 

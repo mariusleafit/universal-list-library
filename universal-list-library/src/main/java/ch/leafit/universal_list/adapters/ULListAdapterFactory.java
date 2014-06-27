@@ -2,6 +2,7 @@ package ch.leafit.universal_list.adapters;
 
 import android.content.Context;
 import android.widget.BaseAdapter;
+import android.widget.Filterable;
 import ch.leafit.universal_list.list_items.ULListItemBaseModel;
 import ch.leafit.universal_list.list_items.ULSectionTitleListItemModel;
 
@@ -41,6 +42,35 @@ public final class ULListAdapterFactory {
                 returnAdapter = new ULSectionedListAdapter<ULListItemBaseModel>(context,itemsList);
             } else { //--> DynamicList
                 returnAdapter = new ULDynamicListAdapter(context,itemsList);
+            }
+
+        }
+
+        return returnAdapter;
+    }
+
+    public static ULListAdapter getCorrectSearchableAdapterForItemsList(Context context, List<ULListItemBaseModel> itemsList) {
+        ULListAdapter returnAdapter = null;
+
+        /*
+            * get different viewtypes
+         */
+        ArrayList<Class> availableViewTypes = new ArrayList<Class>();
+        //count the different viewtypes
+        for (ULListItemBaseModel currentItem : itemsList) {
+            Class currentViewType = currentItem.getClass();
+            if(!availableViewTypes.contains(currentViewType)) {
+                availableViewTypes.add(currentViewType);
+            }
+        }
+
+        if(availableViewTypes.size() != 0) {
+            if (availableViewTypes.size() == 1) { //--> SimpleList
+                returnAdapter = new ULSearchableSimpleListAdapter<ULListItemBaseModel>(context,itemsList);
+            } else if(availableViewTypes.size() == 2 && availableViewTypes.contains(ULSectionTitleListItemModel.class)) { //-> SectionedList
+                returnAdapter = new ULSearchableSectionedListAdapter<ULListItemBaseModel>(context,itemsList);
+            } else { //--> DynamicList
+                returnAdapter = new ULSearchableDynamicListAdapter(context,itemsList);
             }
 
         }

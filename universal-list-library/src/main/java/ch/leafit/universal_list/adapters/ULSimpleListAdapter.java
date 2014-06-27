@@ -38,6 +38,7 @@ public class ULSimpleListAdapter<T extends ULListItemBaseModel> extends ULListAd
         } else {
             return null;
         }
+
     }
 
     @Override
