@@ -70,9 +70,10 @@ public class HelloAndroidActivity extends Activity {
         simpleItems.add(new ULOneFieldListItemModel("IntelliJ"));
         simpleItems.add(new ULOneFieldListItemModel("Einkaufen"));
         simpleItems.add(new ULTwoFieldsListItemModel("Marius","Gächter"));
+        simpleItems.add(new ULTwoFieldsListItemModel("Marius","Gächter"));
         simpleItems.add(new ULOneFieldListItemModel("Marius"));
 
-        ULListActivityIntentDatastore intentDatastore = new ULListActivityIntentDatastore("Meine Liste",simpleItems,defaultValue, ListView.CHOICE_MODE_MULTIPLE);
+        ULListActivityIntentDatastore intentDatastore = new ULListActivityIntentDatastore("Meine Liste",simpleItems,defaultValue, ListView.CHOICE_MODE_SINGLE);
 
         Intent listIntent =  intentDatastore.getIntent(this, ULSearchListActivity.class);
 

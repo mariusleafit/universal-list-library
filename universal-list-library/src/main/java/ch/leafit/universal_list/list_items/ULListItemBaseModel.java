@@ -10,6 +10,8 @@ import java.util.UUID;
 
 /**
  * Created by marius on 26/06/14.
+ *
+ * Subclass this class to create your own listItem-types
  */
 public abstract class ULListItemBaseModel implements Parcelable {
 

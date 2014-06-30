@@ -49,6 +49,12 @@ public final class ULListAdapterFactory {
         return returnAdapter;
     }
 
+    /**
+     *
+     * @param context Context for which the adapter is created
+     * @param itemsList Items you want to have in the list
+     * @return ListAdapter with the optimal type for the task
+     */
     public static ULListAdapter getCorrectSearchableAdapterForItemsList(Context context, List<ULListItemBaseModel> itemsList) {
         ULListAdapter returnAdapter = null;
 

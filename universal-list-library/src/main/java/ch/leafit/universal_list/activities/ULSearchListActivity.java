@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Filterable;
 import android.widget.ListView;
@@ -50,6 +52,18 @@ public class ULSearchListActivity extends ULListBaseActivity {
                 /*set defaultValue if necessary*/
                 if(mIntentDatastore.mDefaultValuePosition != -1) {
                     listView.setItemChecked(mIntentDatastore.mDefaultValuePosition, true);
+                }
+
+                //if single choice we want to leave the list as soon as a selection was made
+                if(mIntentDatastore.mListViewChoiceMode == ListView.CHOICE_MODE_SINGLE) {
+                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                            /*set item as checked & leave the activity*/
+                            ((ListView)adapterView).setItemChecked(position, true);
+                            ULSearchListActivity.this.returnSelectedItems();
+                        }
+                    });
                 }
             }
 
