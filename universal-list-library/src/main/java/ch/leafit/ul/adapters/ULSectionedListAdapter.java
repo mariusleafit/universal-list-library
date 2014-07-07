@@ -1,15 +1,13 @@
-package ch.leafit.universal_list.adapters;
+package ch.leafit.ul.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import ch.leafit.universal_list.list_items.ULListItemBaseModel;
-import ch.leafit.universal_list.list_items.ULSectionTitleListItemModel;
+import ch.leafit.ul.list_items.ULListItemBaseModel;
+import ch.leafit.ul.list_items.ULSectionTitleListItemModel;
 
 import java.util.List;
-import java.util.UUID;
 
 /**
  * Created by marius on 26/06/14.

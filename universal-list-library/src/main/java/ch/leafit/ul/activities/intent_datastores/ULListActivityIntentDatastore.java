@@ -1,11 +1,10 @@
-package ch.leafit.universal_list.activities.intent_datastores;
+package ch.leafit.ul.activities.intent_datastores;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.widget.ListView;
 import ch.leafit.iac.IntentDatastore;
-import ch.leafit.universal_list.list_items.ULListItemBaseModel;
+import ch.leafit.ul.list_items.ULListItemBaseModel;
 
 import java.util.ArrayList;
 

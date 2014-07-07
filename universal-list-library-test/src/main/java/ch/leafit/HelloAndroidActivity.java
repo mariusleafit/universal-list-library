@@ -6,23 +6,23 @@ import android.os.Bundle;
 
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import ch.leafit.universal_list.activities.ULListActivity;
-import ch.leafit.universal_list.activities.ULSearchListActivity;
-import ch.leafit.universal_list.activities.intent_datastores.ULListActivityIntentDatastore;
-import ch.leafit.universal_list.activities.intent_datastores.ULListActivityReturnIntentDatastore;
-import ch.leafit.universal_list.adapters.ULDynamicListAdapter;
-import ch.leafit.universal_list.adapters.ULSectionedListAdapter;
-import ch.leafit.universal_list.adapters.ULSimpleListAdapter;
-import ch.leafit.universal_list.list_items.ULListItemBaseModel;
-import ch.leafit.universal_list.list_items.ULOneFieldListItemModel;
-import ch.leafit.universal_list.list_items.ULSectionTitleListItemModel;
-import ch.leafit.universal_list.list_items.ULTwoFieldsListItemModel;
-import ch.leafit.universal_list.styles.ULSelectableListRowDefaultSelector;
+import ch.leafit.ul.activities.ULListActivity;
+import ch.leafit.ul.activities.ULSearchListActivity;
+import ch.leafit.ul.activities.intent_datastores.ULListActivityIntentDatastore;
+import ch.leafit.ul.activities.intent_datastores.ULListActivityReturnIntentDatastore;
+import ch.leafit.ul.adapters.ULDynamicListAdapter;
+import ch.leafit.ul.adapters.ULSectionedListAdapter;
+import ch.leafit.ul.adapters.ULSimpleListAdapter;
+import ch.leafit.ul.list_items.ULListItemBaseModel;
+import ch.leafit.ul.list_items.ULOneFieldListItemModel;
+import ch.leafit.ul.list_items.ULSectionTitleListItemModel;
+import ch.leafit.ul.list_items.ULTwoFieldsListItemModel;
+import ch.leafit.ul.styles.ULSelectableListRowDefaultSelector;
+import ch.leafit.ul.R;
+
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HelloAndroidActivity extends Activity {
 

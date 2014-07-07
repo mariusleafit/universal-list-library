@@ -1,12 +1,12 @@
-package ch.leafit.universal_list.activities;
+package ch.leafit.ul.activities;
 
 import android.app.ListActivity;
 import android.content.Intent;
 import android.util.SparseBooleanArray;
 import android.widget.ListView;
-import ch.leafit.universal_list.activities.intent_datastores.ULListActivityReturnIntentDatastore;
-import ch.leafit.universal_list.adapters.ULListAdapter;
-import ch.leafit.universal_list.list_items.ULListItemBaseModel;
+import ch.leafit.ul.activities.intent_datastores.ULListActivityReturnIntentDatastore;
+import ch.leafit.ul.adapters.ULListAdapter;
+import ch.leafit.ul.list_items.ULListItemBaseModel;
 
 import java.util.ArrayList;
 
@@ -25,7 +25,7 @@ public abstract class ULListBaseActivity extends ListActivity {
         /*get checked items*/
         SparseBooleanArray checkedItemPositions = listView.getCheckedItemPositions();
 
-        if(checkedItemPositions != null) {
+        if(mListAdapter != null && checkedItemPositions != null && checkedItemPositions.size() > 0) {
             for(int i = 0; i < mListAdapter.getCount(); i++) {
                 if(checkedItemPositions.get(i)) {
                     Object checkedItem = mListAdapter.getItem(i);

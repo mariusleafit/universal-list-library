@@ -1,4 +1,4 @@
-package ch.leafit.universal_list.adapters;
+package ch.leafit.ul.adapters;
 
 import android.widget.BaseAdapter;
 

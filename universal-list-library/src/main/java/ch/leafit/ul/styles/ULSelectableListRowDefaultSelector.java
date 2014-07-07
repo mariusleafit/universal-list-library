@@ -1,9 +1,7 @@
-package ch.leafit.universal_list.styles;
+package ch.leafit.ul.styles;
 
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 
 /**

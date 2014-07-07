@@ -1,10 +1,8 @@
-package ch.leafit.universal_list.adapters;
+package ch.leafit.ul.adapters;
 
 import android.content.Context;
-import android.widget.BaseAdapter;
-import android.widget.Filterable;
-import ch.leafit.universal_list.list_items.ULListItemBaseModel;
-import ch.leafit.universal_list.list_items.ULSectionTitleListItemModel;
+import ch.leafit.ul.list_items.ULListItemBaseModel;
+import ch.leafit.ul.list_items.ULSectionTitleListItemModel;
 
 import java.util.ArrayList;
 import java.util.List;

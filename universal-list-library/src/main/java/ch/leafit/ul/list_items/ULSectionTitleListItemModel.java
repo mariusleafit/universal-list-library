@@ -1,10 +1,10 @@
-package ch.leafit.universal_list.list_items;
+package ch.leafit.ul.list_items;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.view.View;
 import android.widget.TextView;
-import ch.leafit.R;
+import ch.leafit.ul.R;
 
 /**
  * Created by marius on 26/06/14.
@@ -50,6 +50,12 @@ public class ULSectionTitleListItemModel extends ULListItemBaseModel {
     public boolean passesFilterTest(CharSequence filterText) {
         return true;
     }
+
+    @Override
+    public String getValueString() {
+        return null;
+    }
+
 
     /*
 	 * @Parcelable

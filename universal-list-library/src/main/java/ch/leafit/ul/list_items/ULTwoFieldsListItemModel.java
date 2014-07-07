@@ -1,4 +1,4 @@
-package ch.leafit.universal_list.list_items;
+package ch.leafit.ul.list_items;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import java.util.Locale;
-import java.util.Random;
 
 /**
  * Created by marius on 26/06/14.
@@ -50,6 +49,11 @@ public class ULTwoFieldsListItemModel extends ULListItemBaseModel {
                 txtRight.setText(mRightText);
             }
         }
+    }
+
+    @Override
+    public String getValueString() {
+        return mRightText;
     }
 
     @Override

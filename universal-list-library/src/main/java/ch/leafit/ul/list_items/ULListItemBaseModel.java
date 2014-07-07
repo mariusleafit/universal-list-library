@@ -1,12 +1,7 @@
-package ch.leafit.universal_list.list_items;
+package ch.leafit.ul.list_items;
 
-import android.os.Parcel;
 import android.os.Parcelable;
 import android.view.View;
-import android.widget.TextView;
-
-import java.util.Random;
-import java.util.UUID;
 
 /**
  * Created by marius on 26/06/14.
@@ -28,6 +23,11 @@ public abstract class ULListItemBaseModel implements Parcelable {
      */
     public abstract void fillDataInView(View v);
 
+    /**
+     *
+     * @return String which represents the Value of the ListItem
+     */
+    public abstract String getValueString();
 
     /**
      *
